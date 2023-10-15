@@ -38,7 +38,7 @@ include(${cmake-toolchains_SOURCE_DIR}/silicon/st/STM32Cube.cmake)
 # This will set the CPACK tar file as
 # hal_stm-v5-<cmsisVersion>-<cortexType>-<compiler>-<compilerVersion>.tar.gz
 set(CPACK_PACKAGE_CHECKSUM SHA3_256)
-set(CPACK_SYSTEM_NAME "$ENV{CORTEX_TYPE}-${CMAKE_C_COMPILER_ID}-${CMAKE_C_COMPILER_VERSION}")
+set(CPACK_SYSTEM_NAME "${STM32_DEVICE}-${CMAKE_C_COMPILER_ID}-${CMAKE_C_COMPILER_VERSION}")
 set(CPACK_BINARY_TGZ "ON")
 set(CPACK_BINARY_ZIP "OFF")
 set(CPACK_BINARY_ZIP "OFF")

@@ -46,7 +46,7 @@
             "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/build/${presetName}/_deps/cmake-toolchains-src/llvm-clang-arm.cmake",
             "GITHUB_BRANCH_TOOLCHAIN": "HEAD",
             "STM32_TYPE": "h7",
-            "STM32_DEVICE": "STM32H7A3ZI",
+            "STM32_DEVICE": "STM32H7A3xxQ",
             "JLINK_DEVICE": "STM32H7A3ZI"
         }
     },
@@ -68,7 +68,7 @@
             "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/build/${presetName}/_deps/cmake-toolchains-src/llvm-clang-arm.cmake",
             "GITHUB_BRANCH_TOOLCHAIN": "HEAD",
             "STM32_TYPE": "h7",
-            "STM32_DEVICE": "STM32H743XI",
+            "STM32_DEVICE": "STM32H743xx",
             "JLINK_DEVICE": "STM32H743XI"
         }
     }
