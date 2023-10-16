@@ -10,3 +10,4 @@ compile_commands.json
 CTestTestfile.cmake
 [bB]uild
 _deps
+.DS_Store

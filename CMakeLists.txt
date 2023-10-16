@@ -28,18 +28,18 @@ endif()
 
 set(GITHUB_BRANCH_cmsis-v5 "5.9.0")
 set(PRECOMPILED_TAG_cmsis-v5 "0.1.2")
-
+set(GITHUB_BRANCH_cubemx "1.11.1")
 project(
-    hal_stm
-    VERSION "0.0.1"
-    LANGUAGES C
-    DESCRIPTION "Library for stm32 hardware access layer"
+    cubemx
+    VERSION ${GITHUB_BRANCH_cubemx}
+    LANGUAGES   C ASM CXX
+    DESCRIPTION "Hardware Abstraction Layer for ${STM32_DEVICE}"
 )
 
 include(${cmake-toolchains_SOURCE_DIR}/frameworks/arm_cmsis-v5/arm_cmsis-v5.cmake)
-include(${cmake-toolchains_SOURCE_DIR}/silicon/st/STM32Cube.cmake)
+include(${cmake-toolchains_SOURCE_DIR}/silicon/st/cubemx.cmake)
 # This will set the CPACK tar file as
-# hal_stm-v5-<cmsisVersion>-<cortexType>-<compiler>-<compilerVersion>.tar.gz
+# cubemx-<cubemxVersion>-<stm32Device>-<compiler>-<compilerVersion>.tar.gz
 set(CPACK_PACKAGE_CHECKSUM SHA3_256)
 set(CPACK_SYSTEM_NAME "${STM32_DEVICE}-${CMAKE_C_COMPILER_ID}-${CMAKE_C_COMPILER_VERSION}")
 set(CPACK_BINARY_TGZ "ON")
