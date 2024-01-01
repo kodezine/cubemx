@@ -23,8 +23,10 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(cmake_scripts)
 
 set(GITHUB_BRANCH_cmsis_v5 "5.9.0")
-set(PRECOMPILED_TAG_cmsis_v5 "0.2.0")
+# set(PRECOMPILED_TAG_cmsis_v5 "0.2.0")
 set(GITHUB_BRANCH_cubemx "1.11.1")
+set(GITHUB_BRANCH_cmsis_dsp "1.15.0")
+
 project(
     cubemx
     VERSION ${GITHUB_BRANCH_cubemx}
@@ -33,6 +35,7 @@ project(
 )
 
 include(${cmake_scripts_SOURCE_DIR}/frameworks/cmsis_v5/cmsis_v5.cmake)
+include(${cmake_scripts_SOURCE_DIR}/frameworks/cmsis_dsp/cmsis_dsp.cmake)
 include(${cmake_scripts_SOURCE_DIR}/silicon/st/cubemx.cmake)
 # This will set the CPACK tar file as
 # cubemx-<cubemxVersion>-<stm32Device>-<compiler>-<compilerVersion>.tar.gz
