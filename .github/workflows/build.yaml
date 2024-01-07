@@ -12,7 +12,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: kx1karbon
     strategy:
       # visualize which variants fail and pass to derive upstream dependency status
       fail-fast: false
